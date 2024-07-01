@@ -1,31 +1,51 @@
 body {
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-blend-mode: overlay;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 #form {
     width: 300px;
-    margin: 20vh auto 0 auto;
-    padding: 20px;
-    background-color: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
+    padding: 30px; 
+    background-color: #f0f0f0; 
+    border-radius: 8px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    transition: transform 0.3s ease; 
 }
+
+#form:hover {
+    transform: translateY(-5px); 
+}
+
 
 #form h1 {
     color: #0f2027;
-    text-align: center;
+    font-size: 24px; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
 }
 
 #form button {
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px; 
+    margin-top: 20px; 
     width: 100%;
     color: white;
     background-color: rgb(41, 57, 194);
     border: none;
-    border-radius: 4px;
+    border-radius: 20px; 
+    cursor: pointer;
+    background-image: linear-gradient(to right, #5c7bff, #4d6ef8); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-image 0.3s ease; 
 }
+#form button:hover {
+    background-image: linear-gradient(to right, #4d6ef8, #5c7bff); 
+} 
 
 .input-control {
     display: flex;
@@ -33,28 +53,28 @@ body {
 }
 
 .input-control input {
-    border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
-	font-size: 12px;
-	padding: 10px;
-	width: 100%;
+    border: 2px solid #ddd; 
+    border-radius: 6px;
+    font-size: 14px; 
+    padding: 14px; 
+    transition: border-color 0.3s ease; 
 }
 
 .input-control input:focus {
-    outline: 0;
+    outline: none;
+    border-color: #4d6ef8; 
 }
 
 .input-control.success input {
-    border-color: #09c372;
+    border-color: #09c372; 
 }
 
 .input-control.error input {
-    border-color: #ff3860;
+    border-color: #ff3860; 
 }
 
 .input-control .error {
     color: #ff3860;
-    font-size: 9px;
-    height: 13px;
+    font-size: 11px; 
+    margin-top: 4px; 
 }
